@@ -528,7 +528,7 @@ extension DataRequest {
     ///
     /// - returns: The request.
     @discardableResult
-    public func responseJSON(
+    open func responseJSON(
         queue: DispatchQueue? = nil,
         options: JSONSerialization.ReadingOptions = .allowFragments,
         completionHandler: @escaping (DataResponse<Any>) -> Void)
