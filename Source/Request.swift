@@ -59,7 +59,7 @@ public protocol RequestRetrier {
 
 // MARK: -
 
-protocol TaskConvertible {
+public protocol TaskConvertible {
     func task(session: URLSession, adapter: RequestAdapter?, queue: DispatchQueue) throws -> URLSessionTask
 }
 
@@ -77,7 +77,7 @@ open class Request {
     /// A closure executed when monitoring upload or download progress of a request.
     public typealias ProgressHandler = (Progress) -> Void
 
-    enum RequestTask {
+    public enum RequestTask {
         case data(TaskConvertible?, URLSessionTask?)
         case download(TaskConvertible?, URLSessionTask?)
         case upload(TaskConvertible?, URLSessionTask?)
